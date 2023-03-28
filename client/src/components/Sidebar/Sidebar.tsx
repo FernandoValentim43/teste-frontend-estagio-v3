@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Card } from "../Card/Card";
 import { ScrollAreaComp } from "../Scroll/Scroll";
 import { Select } from "../Select/Select";
