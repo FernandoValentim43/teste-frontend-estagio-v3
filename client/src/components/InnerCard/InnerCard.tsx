@@ -27,7 +27,6 @@ export const InnerCard: React.FC<InnerProps> = ({ equipment }) => {
     hour12: false,
   });
 
-
   return (
     <div className="innerCard">
       <div className="header">
