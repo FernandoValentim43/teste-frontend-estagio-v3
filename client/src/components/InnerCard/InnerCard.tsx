@@ -7,9 +7,10 @@ import { setStateIcon } from "../../utils/setStateIcon";
 
 interface InnerProps {
   equipment: Equipament;
+  index?: number;
 }
 
-export const InnerCard: React.FC<InnerProps> = ({ equipment }) => {
+export const InnerCard: React.FC<InnerProps> = ({ equipment, index }) => {
   const state = equipment.getMostRecentState();
   const position = equipment.getMostRecentPosition();
 
@@ -35,11 +36,14 @@ export const InnerCard: React.FC<InnerProps> = ({ equipment }) => {
           <h2>{equipment.equipName}</h2>
         </div>
 
-        {setStateIcon(state[2])}
+        {setStateIcon(state[2], false)}
       </div>
 
       <div className="body">
-        <p className="state">{State.getNameStateId(state[2])}</p>
+        <p className="state">
+          index
+          {State.getNameStateId(state[2])}
+          </p>
         <p className="thisDate">{formattedDate}</p>
       </div>
 

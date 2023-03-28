@@ -325,6 +325,9 @@ button {
   display: flex;
   flex-direction: column;
 }
+.leaflet-popup-content .index {
+  display: none;
+}
 
 /* reset */
 button,
@@ -367,7 +370,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1;
   color: white;
   box-shadow: 0 1px 0 black;
@@ -485,7 +489,7 @@ h3 {
 }
 .positioncomp .state p {
   margin-left: 3px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .positioncomp .date {
   padding-top: 1px;

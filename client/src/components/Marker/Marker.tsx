@@ -7,9 +7,13 @@ import { PopUpComponent } from "../PopUpComponent/PopUpComponent";
 
 interface MarkerProps {
   equipment: Equipament;
+  index: number;
 }
 
-export const MarkerComponent: React.FC<MarkerProps> = ({equipment}) => {
+export const MarkerComponent: React.FC<MarkerProps> = ({
+  equipment,
+  index,
+}) => {
   const state = equipment.getMostRecentState();
   const position = equipment.getMostRecentPosition();
 
@@ -23,12 +27,11 @@ export const MarkerComponent: React.FC<MarkerProps> = ({equipment}) => {
     iconAnchor: [12, 41],
   });
 
-
-  
-
   return (
-    <Marker position={[position[0] , position[1]]} icon={pinIcon} >
-      <PopUpComponent equipment={equipment}/>
-    </Marker>
+    <div>
+      <Marker position={[position[0], position[1]]} icon={pinIcon} >
+        <PopUpComponent equipment={equipment} index={index} />
+      </Marker>
+    </div>
   );
 };

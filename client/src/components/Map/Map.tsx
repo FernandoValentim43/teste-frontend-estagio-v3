@@ -29,11 +29,12 @@ export const Map: React.FC<MapProps> = ({ lat, lon, equipments }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {equipments.map((equipment) => {
+        {equipments.map((equipment, index) => {
           return (
             <MarkerComponent
               equipment={equipment}
               key={equipment.equipId + equipment.typeId}
+              index={index}
             />
           );
         })}
